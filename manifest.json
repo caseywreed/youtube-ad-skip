@@ -1,0 +1,13 @@
+{
+  "name": "Wes Bos's YouTube Ad Skip",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Skips YouTube's pre-roll ads using a sneaky script from Wes Bos",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["scripts.js"]
+    }
+  ]
+}
+
