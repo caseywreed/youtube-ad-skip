@@ -1,12 +1,22 @@
 {
-  "name": "Wes Bos's YouTube Ad Skip",
+  "name": "Down The Tubes",
   "version": "1.0",
   "manifest_version": 2,
   "description": "Skips YouTube's pre-roll ads using a sneaky script from Wes Bos",
+  "permissions": [
+    "activeTab"
+  ],
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
       "js": ["scripts.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Skip this ad"
+  }
 }
